@@ -1,4 +1,5 @@
 # App artifacts
+/.idea
 /_build
 /db
 /deps
