@@ -1,4 +1,4 @@
-# HelloPhoenix
+# Phoenix-sample
 
 To start your Phoenix app:
 
@@ -17,3 +17,34 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: http://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## API
+
+index
+```
+$ curl http://localhost:4000/api/todos
+```
+
+show
+```
+$ curl http://localhost:4000/api/todos/:id
+```
+
+create
+```
+$ curl http://localhost:4000/api/todos -X POST -d "todo[title]=jogging" -d "todo[status]=false"
+```
+
+edit
+```
+$ curl http://localhost:4000/api/todos/:id -X PUT -d "todo[title]=movie"
+```
+
+delete
+```
+$ curl http://localhost:4000/api/todos/:id -X DELETE
+```
+
+## LICENSE
+
+MIT

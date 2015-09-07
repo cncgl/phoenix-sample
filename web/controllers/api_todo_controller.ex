@@ -10,48 +10,44 @@ defmodule HelloPhoenix.Api.TodoController do
     json conn, %{todos: todos}
   end
 
-  def new(conn, _params) do
-    changeset = Todo.changeset(%Todo{})
-    json conn, %{changeset: changeset}
-  end
-
-  # def create(conn, %{"todo" => todo_params}) do
-  #  changeset = Todo.changeset(%Todo{}, todo_params)
-  #
-  #  case Repo.insert(changeset) do
-  #    {:ok, _todo} ->
-  #      conn
-  #      |> put_flash(:info, "Todo created successfully.")
-  #      |> redirect(to: todo_path(conn, :index))
-  #    {:error, changeset} ->
-  #      render(conn, "new.html", changeset: changeset)
-  #  end
+  # def new(conn, _params) do
+  #   changeset = Todo.changeset(%Todo{})
+  #   json conn, %{changeset: changeset}
   # end
+
+  def create(conn, %{"todo" => todo_params}) do
+    changeset = Todo.changeset(%Todo{}, todo_params)
+
+    case Repo.insert(changeset) do
+     {:ok, _todo} ->
+        json conn, %{info: _todo.id}
+     {:error, changeset} ->
+       json conn, %{error: "error"}
+   end
+  end
 
   def show(conn, %{"id" => id}) do
     todo = Repo.get!(Todo, id)
     json conn, %{todo: todo}
   end
 
-  def edit(conn, %{"id" => id}) do
-    todo = Repo.get!(Todo, id)
-    changeset = Todo.changeset(todo)
-    json conn, %{todo: todo, changeset: changeset}
-  end
-
-  # def update(conn, %{"id" => id, "todo" => todo_params}) do
-  #  todo = Repo.get!(Todo, id)
-  #  changeset = Todo.changeset(todo, todo_params)
-  #
-  #  case Repo.update(changeset) do
-  #    {:ok, todo} ->
-  #      conn
-  #      |> put_flash(:info, "Todo updated successfully.")
-  #      |> redirect(to: todo_path(conn, :show, todo))
-  #    {:error, changeset} ->
-  #      render(conn, "edit.html", todo: todo, changeset: changeset)
-  #  end
+  # def edit(conn, %{"id" => id}) do
+  #   todo = Repo.get!(Todo, id)
+  #   changeset = Todo.changeset(todo)
+  #   json conn, %{todo: todo, changeset: changeset}
   # end
+
+  def update(conn, %{"id" => id, "todo" => todo_params}) do
+    todo = Repo.get!(Todo, id)
+    changeset = Todo.changeset(todo, todo_params)
+
+    case Repo.update(changeset) do
+      {:ok, todo} ->
+        json conn, %{info: "ok"}
+      {:error, changeset} ->
+        json conn, %{error: "error"}
+    end
+  end
 
   def delete(conn, %{"id" => id}) do
     todo = Repo.get!(Todo, id)
@@ -60,8 +56,6 @@ defmodule HelloPhoenix.Api.TodoController do
     # it to always work (and if it does not, it will raise).
     Repo.delete!(todo)
 
-    conn
-    |> put_flash(:info, "Todo deleted successfully.")
-    |> redirect(to: todo_path(conn, :index))
+    json conn, %{info: "ok"}
   end
  end
