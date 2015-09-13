@@ -6,9 +6,10 @@ defmodule HelloPhoenix.Api.TodoController do
   plug :scrub_params, "todo" when action in [:create, :update]
 
   def index(conn, _params) do
-    query = from w in Todo, order_by: [asc: :id]
-    todos = query
-        |> Repo.all(Todo)
+    # query = from w in Todo, order_by: [asc: :id]
+    todos = Repo.all from t in Todo,
+        order_by: :id
+
     json conn, %{todos: todos}
   end
 
