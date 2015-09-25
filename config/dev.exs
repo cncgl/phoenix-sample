@@ -12,7 +12,8 @@ config :hello_phoenix, HelloPhoenix.Endpoint,
   code_reloader: true,
   cache_static_lookup: false,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
+  watchers: [gulp: ["watch"]]
+#  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
 
 # Watch static and templates for browser reloading.
 config :hello_phoenix, HelloPhoenix.Endpoint,
