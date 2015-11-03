@@ -38,5 +38,5 @@ config :hello_phoenix, HelloPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "hello_phoenix_dev",
+  database: "sample_dev",
   pool_size: 10

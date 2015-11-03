@@ -17,5 +17,5 @@ config :hello_phoenix, HelloPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "hello_phoenix_test",
+  database: "sample_test",
   pool: Ecto.Adapters.SQL.Sandbox
