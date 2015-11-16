@@ -2,6 +2,7 @@
 
 To start your Phoenix app:
 
+  0. Database setting. Install postgres and create 'postgres' with password 'postgres'
   1. Install gulp with `npm i -g gulp`
   2. Install dependencies with `mix deps.get`
   3. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
