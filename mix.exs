@@ -32,7 +32,7 @@ defmodule HelloPhoenix.Mixfile do
     [{:phoenix, "~> 1.1.1"},
      {:phoenix_ecto, "~> 1.2"},
      {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.2"},
+     {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 0.19.9"}]
