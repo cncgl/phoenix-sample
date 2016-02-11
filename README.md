@@ -1,5 +1,8 @@
 # Phoenix-sample
 
+[![Build Status](https://travis-ci.org/cncgl/phoenix-todo.svg?branch=master)](https://travis-ci.org/cncgl/phoenix-todo)
+
+
 To start your Phoenix app:
 
   0. Database setting. Install postgres and create 'postgres' with password 'postgres'
