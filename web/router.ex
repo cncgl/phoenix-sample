@@ -65,7 +65,7 @@ defmodule HelloPhoenix.Router do
   scope "/api", HelloPhoenix do
     pipe_through :api
 
-    resources "todos", Api.TodoController
+    resources "todos", Api.TodoController, only: [:index, :show, :create, :update, :delete]
     # resources "reviews", ReviewController
     # resources "contacts", ContactController
   end

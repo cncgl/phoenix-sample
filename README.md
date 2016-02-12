@@ -1,11 +1,13 @@
 # phoenix-todo
 
+A todo application for Phoenix on elixir
+
 [![Build Status](https://travis-ci.org/cncgl/phoenix-todo.svg?branch=master)](https://travis-ci.org/cncgl/phoenix-todo)
 
 
 
 
-## Install dependencies
+## Install Dependencies
 ```
 $ npm i -g gulp
 $ mix deps.get
