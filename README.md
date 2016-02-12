@@ -1,27 +1,27 @@
-# Phoenix-sample
+# phoenix-todo
 
 [![Build Status](https://travis-ci.org/cncgl/phoenix-todo.svg?branch=master)](https://travis-ci.org/cncgl/phoenix-todo)
 
 
-To start your Phoenix app:
 
-  0. Database setting. Install postgres and create 'postgres' with password 'postgres'
-  1. Install gulp with `npm i -g gulp`
-  2. Install dependencies with `mix deps.get`
-  3. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  4. Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Install dependencies
+```
+$ npm i -g gulp
+$ mix deps.get
+```
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+## Prepare Database
+Install PostgreSQL and create user `postgres` with password `postgres`.
+```
+$ mix ecto.create && mix ecto.migrate
+```
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+## Run Service
+```
+$ mix phoenix.server
+```
+visit http://localhost:4000/api/todos
 
 ## API
 
