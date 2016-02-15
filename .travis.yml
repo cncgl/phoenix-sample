@@ -10,8 +10,10 @@ env:
   - MIX_ENV=test
 
 script:
-  - mix do deps.get, credo, test
-  - mix compile
+  - mix deps.get
+  - mix credo --only warning
+  - mix test
+#  - mix compile
   - mix coveralls.travis
 
 after_script:
