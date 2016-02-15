@@ -39,6 +39,7 @@ defmodule HelloPhoenix.Mixfile do
      {:cowboy, "~> 1.0"},
      {:exrm, "~> 0.19.9"},
      {:excoveralls, "~> 0.4", only: :test},
+     {:credo, "~> 0.3", only: [:dev, :test]},
      {:inch_ex, only: :docs}]
   end
 end

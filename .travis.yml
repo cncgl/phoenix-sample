@@ -10,7 +10,7 @@ env:
   - MIX_ENV=test
 
 script:
-  - "mix do deps.get, test && mix compile && mix coveralls.travis"
+  - "mix do deps.get, cred, test && mix compile && mix coveralls.travis"
 
 after_script:
   - MIX_ENV=docs mix deps.get
