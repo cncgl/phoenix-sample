@@ -3,6 +3,7 @@
 A todo application for Phoenix on elixir
 
 [![Build Status](https://travis-ci.org/cncgl/phoenix-todo.svg?branch=master)](https://travis-ci.org/cncgl/phoenix-todo)
+[![Coverage Status](https://coveralls.io/repos/github/cncgl/phoenix-todo/badge.svg?branch=master)](https://coveralls.io/github/cncgl/phoenix-todo?branch=master)
 
 
 

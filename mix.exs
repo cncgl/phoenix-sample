@@ -35,6 +35,8 @@ defmodule HelloPhoenix.Mixfile do
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:exrm, "~> 0.19.9"}]
+     {:exrm, "~> 0.19.9"},
+     {:excoveralls, "~> 0.4", only: :test},
+     {:inch_ex, only: :docs}]
   end
 end
