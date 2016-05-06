@@ -40,6 +40,6 @@ defmodule HelloPhoenix.Mixfile do
      {:exrm, "~> 0.19.9"},
      {:excoveralls, "~> 0.4", only: :test},
      {:credo, "~> 0.3", only: [:dev, :test]},
-     {:inch_ex, only: :docs}]
+     {:inch_ex, ">= 0.0.0", only: :docs}]
   end
 end

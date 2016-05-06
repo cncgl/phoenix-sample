@@ -1,7 +1,7 @@
 language: elixir
 
 elixir:
-  - 1.2.2
+  - 1.2.5
 
 otp_release:
   - 18.2.1
@@ -13,7 +13,6 @@ script:
   - mix deps.get
   - mix credo --only warning
   - mix test
-#  - mix compile
   - mix coveralls.travis
 
 after_script:
